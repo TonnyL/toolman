@@ -75,12 +75,15 @@ echo "✅ ClashX installed"
 brew install ffmpeg
 echo "✅ FFmpeg installed"
 
-brew install youtube-dl
-echo "✅ youtube-dl installed"
+brew install yt-dlp/taps/yt-dlp
+echo "✅ yt-dlp installed"
 
 brew tap PotatoLabs/homebrew-git-redate
 brew install git-redate
 echo "✅ git-redate installed"
+
+brew install docker
+echo "✅ docker installed"
 
 # Customize Git
 cat > .zshrc << EOF
@@ -106,8 +109,8 @@ syntax on
 colorscheme desert
 EOF
 
-git config user.name "tonnyl"
-git config user.email "lizhaotailang@gmail.com"
+git config --global user.name "tonnyl"
+git config --global user.email "lizhaotailang@gmail.com"
 echo "✅ Configure Git succeeded"
 
 # Set environment arguments
