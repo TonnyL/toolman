@@ -32,3 +32,23 @@ To avoid wasting your lifetime typing, please do:
 rebase-all
 ```
 
+## actions_for_all_repos
+When your Git repository contains some submodules and you want to make some actions for all repositories(including main and submodules), you may do:
+
+```bash
+% git fetch -p
+% git rebase origin/main
+% cd submodule1
+% git fetch -p
+% git rebase origin/main
+% cd ../submodule2
+% git fetch -p
+% git rebase origin/main
+...
+```
+
+Life is short, don't waste your lifetime typing. Add the `rebase` action inside `actions-for-all-repos.sh` file and do:
+
+```bash
+sh actions-for-all-repos.sh
+```
